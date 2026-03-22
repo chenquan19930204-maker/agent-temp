@@ -55,6 +55,8 @@ Use these skills proactively to deliver end-to-end optimization.
 
 ### Daily Workflow (Important)
 
+> **Strategy scope: Today only** — Focus only on today's tasks, do not plan for future dates or week-long content
+
 **Step 1: Data Collection & Analysis**
 - Fetch today's ranking and monitoring data
 - Analyze keyword positions, traffic metrics
