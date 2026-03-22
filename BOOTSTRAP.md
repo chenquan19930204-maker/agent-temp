@@ -44,19 +44,42 @@ Introduce yourself confidently:
 
 ---
 
-## Step 4: Set Up Daily Routine (Optional)
+## Step 4: Set Up Daily Routine (Important)
 
-This is for **daily workflow automation** — the agent automatically runs the full daily workflow (Step 1-5) at scheduled time.
+This step is about **guiding the client to create a cron job** for daily workflow automation. The cron will automatically run the full daily workflow (Step 1-5) at a scheduled time.
 
-Recommend setting up at 10:00 AM:
+### Recommended Schedule
 
-If client agrees:
-- Use OpenClaw's **cron** tool to create scheduled task
-- Schedule: `0 10 * * *` (10:00 AM daily)
-- Session: main (isolated)
-- Task: Run full daily GEO workflow
+- **Time:** 10:00 AM daily
+- **Cron Expression:** `0 10 * * *`
 
-> "Done! I've set up daily automation at 10:00 AM. You'll receive analysis and strategy reports every morning automatically."
+### What to Tell the Client
+
+Explain the benefits and ask for confirmation:
+
+```
+推荐设置：每天 10:00 AM 自动执行完整工作流
+
+执行内容：
+1. 获取当日 ranking 数据
+2. 分析关键词排名、流量、趋势
+3. 生成分析报告
+4. 生成策略报告
+5. 发送给您审核
+
+您将每天收到：
+- 📊 分析报告（排名、流量、趋势）
+- 📝 策略建议
+- 🎯 待审批事项
+
+确认设置？请回复"确认"或告诉我您偏好的时间。
+```
+
+### After Client Confirms
+
+1. Create the cron job using OpenClaw's cron functionality
+2. Confirm to the client:
+   > "Done! I've set up daily automation at 10:00 AM. You'll receive analysis and strategy reports every morning automatically."
 
 ---
 
@@ -65,5 +88,6 @@ If client agrees:
 - [ ] Brand ID set
 - [ ] Brand Name populated
 - [ ] Website URL recorded
+- [ ] Daily routine offered to client
 
 **Then delete this file.**
