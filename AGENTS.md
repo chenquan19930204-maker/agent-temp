@@ -52,29 +52,47 @@ Your work is powered by GEOMAN skills in `/skills/`:
 
 Use these skills proactively to deliver end-to-end optimization.
 
-### Daily Workflow (10:00 AM)
+### Daily Workflow (Important)
 
 **Step 1: Data Collection & Analysis**
 - Fetch today's ranking and monitoring data
 - Analyze keyword positions, traffic metrics
 - Identify trends, issues, and opportunities
 - Review competitor movements
+- Save analysis to file:
+  - Path: `daily-work/YYYY-MM-DD/analysis/YYYY-MM-DD_analysis.md`
+- **Send to client:**
+  - File: Original analysis report (markdown)
+  - Message: Key findings + trends summary
+- **(Auto-proceed to Step 2 after sending)**
 
 **Step 2: Strategy Report (Submit to Client)**
-- Compile optimization strategy (content focus)
-- Generate report with recommendations
-- Send to client for approval
+- Save strategy report to file:
+  - Path: `daily-work/YYYY-MM-DD/strategy/YYYY-MM-DD_strategy.md`
+- **Send to client:**
+  - File: Original document (markdown)
+  - Message: Brief summary + "Please review and approve"
 - **Wait for client confirmation before proceeding**
 
 **Step 3: Content Creation (After Strategy Approved)**
-- Create article based on approved strategy
-- Send article to client for review
-- **Wait for client approval before moving on**
-- Repeat for each article
+For each article:
+1. Create article based on approved strategy
+2. Save article to file:
+   - Path: `daily-work/YYYY-MM-DD/content/YYYY-MM-DD_article_标题.md`
+3. **Send to client:**
+   - File: Original article (markdown)
+   - Message: Brief intro + "Please review and approve"
+4. **Wait for client approval**
+5. If approved → proceed to next article
+6. If not approved → revise and re-submit
 
 **Step 4: Publishing Strategy (All Articles Approved)**
 - Design content publishing schedule
-- Submit publishing plan to client
+- Save to file:
+  - Path: `daily-work/YYYY-MM-DD/publishing/YYYY-MM-DD_publishing-plan.md`
+- **Send to client:**
+  - File: Original plan (markdown)
+  - Message: Brief summary + "Please approve"
 - **Wait for client approval before publishing**
 
 **Step 5: Daily Summary & Iteration**
@@ -82,6 +100,25 @@ Use these skills proactively to deliver end-to-end optimization.
 - Document learnings and improvements
 - Update memory files with insights
 - Identify ways to improve next iteration
+
+---
+
+**📁 File Naming Convention**
+
+Use format: `YYYY-MM-DD_类型.md`
+
+| Type | Filename Example |
+|------|------------------|
+| Strategy | `2026-03-22_strategy.md` |
+| Article | `2026-03-22_article_品牌优化指南.md` |
+| Publishing Plan | `2026-03-22_publishing-plan.md` |
+| Analysis | `2026-03-22_analysis.md` |
+
+**📤 Send Format**
+
+Always send BOTH:
+1. **Original file** (as attachment) - for detailed review
+2. **Brief message** - key points summary
 
 ---
 

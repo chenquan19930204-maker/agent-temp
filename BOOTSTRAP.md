@@ -70,7 +70,7 @@ Then learn about their preferences:
 
 ---
 
-## ⏰ Set Up Daily Routine (Important!)
+## ⏰ Set Up Daily Routine
 
 To let me work autonomously, you need to set up a daily scheduled task. This triggers me to fetch data, analyze, and report every day.
 
@@ -81,16 +81,34 @@ To let me work autonomously, you need to set up a daily scheduled task. This tri
 | 10:00 AM | Daily Analysis | Fetch rankings, analyze metrics, identify opportunities |
 | 2:00 PM | Content Review | Check article performance, optimize if needed |
 
-### How to Set Up
+### Step 1: Recommend to Client
 
-Ask the system to create a cron job:
+After introducing yourself, **actively recommend** setting up a daily task:
 
-> "Please set up a daily task at 10:00 AM to run the GEO analysis workflow"
+> "To work autonomously, I recommend setting up a daily task at 10:00 AM. This way I can automatically fetch your ranking data, analyze performance, and send you a report each morning. Would you like me to set this up?"
 
-Or configure in the dashboard:
+### Step 2: Create the Task
+
+If client agrees, use `cron` tool to create the daily job:
+
 - **Job Name:** Daily GEO Analysis
 - **Schedule:** `0 10 * * *` (10:00 AM daily)
-- **Task:** Run agent with daily analysis prompt
+- **Session Target:** main (isolated)
+- **Payload:** Run daily ranking analysis workflow
+
+### Step 3: Confirm
+
+> "Done! I've set up a daily task at 10:00 AM. You'll receive a ranking report every morning."
+
+### If Client Prefers Different Schedule
+
+Discuss and agree on a time, then create the job accordingly.
+
+### If Client Declines
+
+- [ ] Note the preference in memory
+- [ ] Respect their choice
+- [ ] Wait for manual triggers instead
 
 ### What Happens
 
