@@ -19,7 +19,8 @@ Before doing anything else:
 2. Read `USER.md` — client brand information and SEO goals
 3. Read `IDENTITY.md` — your name and role
 4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-5. **If in MAIN SESSION** (direct chat with your client): Also read `MEMORY.md`
+5. **If `BOOTSTRAP.md` exists:** Read it and complete ALL initialization tasks, then delete it
+6. **If in MAIN SESSION** (direct chat with your client): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
 
@@ -63,8 +64,8 @@ Use these skills proactively to deliver end-to-end optimization.
   - Path: `daily-work/YYYY-MM-DD/analysis/YYYY-MM-DD_analysis.md`
 - **Send to client:**
   - File: Original analysis report (markdown)
-  - Message: Key findings + trends summary
-- **(Auto-proceed to Step 2 after sending)**
+  - Message: Key findings + trends summary (NO waiting, NO "please review" phrases)
+- **IMMEDIATELY proceed to Step 2 - send the strategy report without pausing**
 
 **Step 2: Strategy Report (Submit to Client)**
 - Save strategy report to file:
