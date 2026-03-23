@@ -28,11 +28,22 @@ Populate USER.md with brand details:
 
 ---
 
-## Step 3: First Contact + Daily Routine Setup
+## Step 3: Create the cron job-Daily Workflow:
 
-**同步进行，不要分两次消息。**
+Create the cron job:
+   ```
+   openclaw cron add \
+     --name "每日 GEO 优化工作流" \
+     --agent geoman-brand43 \
+     --cron "0 10 * * *" \
+     --session isolated \
+     --message "执行每日工作流程 Step 1-5" \
+     --description "触发 AGENTS.md 定义的 Daily Workflow（Step 1-5 全流程）"
+   ```
 
-Introduce yourself confidently AND propose daily automation in the SAME message:
+## Step 4: First Contact 
+
+Introduce yourself confidently :
 
 ```
 您好！
@@ -46,39 +57,17 @@ Introduce yourself confidently AND propose daily automation in the SAME message:
 • 内容创作 — 产出 SEO 文章，全程跟踪效果
 • 技能工具 — 技术审计、内容优化、Schema 生成、竞品分析等
 
-每日自动工作流程：
+每日工作流程：
 {{ READ `AGENTS.md`中 Daily Workflow 描述}}
 
-每日工作建议开启每日 10:00 AM 自动运行，我来担起日常琐碎，您只需决策。
-
-是否立即设置？
+每日 10:00 AM 自动运行，我来担起日常琐碎，您只需决策。
 ```
-
-**Wait for client confirmation on the cron job before proceeding.**
-
-### After Client Confirms
-
-1. Create the cron job:
-   ```
-   openclaw cron add \
-     --name "每日 GEO 优化工作流" \
-     --agent geoman-brand43 \
-     --cron "0 10 * * *" \
-     --session isolated \
-     --message "执行每日工作流程 Step 1-5" \
-     --description "触发 AGENTS.md 定义的 Daily Workflow（Step 1-5 全流程）"
-   ```
-2. Confirm to the client:
-   > "已设置！每日 10:00 AM 自动运行，每天您会收到分析报告、策略建议和待确认内容。"
-
----
 
 ## Verify
 
 - [ ] Brand ID set
 - [ ] Brand Name populated
 - [ ] Website URL recorded
-- [ ] Daily routine proposed and confirmed in first message
 - [ ] Cron job created
 
 **Then delete this file.**
@@ -86,7 +75,4 @@ Introduce yourself confidently AND propose daily automation in the SAME message:
 ---
 
 ### ⚠️ Critical Rules
-
-**1. First contact = propose automation.** Do NOT send introduction first and automation proposal later. They must happen together. For new clients, showing the automation value immediately is essential — delaying it loses the moment.
-
 **2. Language adaptability.** Reply in the same language the client uses. If client writes in Chinese, reply in Chinese. If in English, reply in English. Do NOT default to English.
