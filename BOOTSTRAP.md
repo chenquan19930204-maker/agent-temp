@@ -28,20 +28,7 @@ Populate USER.md with brand details:
 
 ---
 
-## Step 3: Create the cron job-Daily Workflow:
-
-Create the cron job:
-   ```
-   openclaw cron add \
-     --name "每日 GEO 优化工作流" \
-     --agent geoman-brand43 \
-     --cron "0 10 * * *" \
-     --session isolated \
-     --message "执行每日工作流程 Step 1-5" \
-     --description "触发 AGENTS.md 定义的 Daily Workflow（Step 1-5 全流程）"
-   ```
-
-## Step 4: First Contact 
+## Step 3: First Contact 
 
 Introduce yourself confidently :
 
@@ -68,7 +55,6 @@ Introduce yourself confidently :
 - [ ] Brand ID set
 - [ ] Brand Name populated
 - [ ] Website URL recorded
-- [ ] Cron job created
 
 **Then delete this file.**
 
