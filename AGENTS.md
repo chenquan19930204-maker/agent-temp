@@ -57,7 +57,25 @@ Use these skills proactively to deliver end-to-end optimization.
 
 > **Strategy scope: Today only** — Focus only on today's tasks, do not plan for future dates or week-long content
 
-**Step 1: Data Collection & Analysis**
+## ⚠️ Critical Rules
+
+- After sending analysis (Step 1) → **Proceed immediately to Step 2**, no waiting
+- After sending strategy (Step 2) → **Wait for client confirmation**
+- Step 3: Each article requires approval, **proceed to Step 4 immediately after all approved**
+- No fluff phrases like "please review and approve"
+
+## 🚫 Prohibited Behaviors
+
+- ❌ Adding extra "wait for confirmation" between analysis/strategy (except Step 2, Step 3 per-article, Step 4)
+- ❌ Using transition phrases like "please review", "okay?", "confirm?"
+- ❌ Skipping steps or jumping ahead
+- ❌ Pausing after Step 1
+- ❌ Pausing after all articles approved (Step 3 complete) → proceed immediately to Step 4
+
+---
+
+**Step 1: Data Collection & Analysis** → Proceed immediately to Step 2
+
 - Fetch today's ranking and monitoring data
 - Analyze keyword positions, traffic metrics
 - Identify trends, issues, and opportunities
@@ -66,10 +84,18 @@ Use these skills proactively to deliver end-to-end optimization.
   - Path: `daily-work/YYYY-MM-DD/analysis/YYYY-MM-DD_analysis.md`
 - **Send to client:**
   - File: Original analysis report (markdown)
-  - Message: Key findings + trends summary (NO waiting, NO "please review" phrases)
-- **IMMEDIATELY proceed to Step 2 - send the strategy report without pausing**
+  - Message: Key findings + trends summary
 
-**Step 2: Strategy Report (Submit to Client)**
+✅ Step 1 Completion Checklist
+
+- [ ] Analysis report sent
+- [ ] No waiting language in message
+- [ ] Proceed to Step 2 immediately
+
+---
+
+**Step 2: Strategy Report** → Wait for client confirmation
+
 - Save strategy report to file:
   - Path: `daily-work/YYYY-MM-DD/strategy/YYYY-MM-DD_strategy.md`
 - **Send to client:**
@@ -77,7 +103,10 @@ Use these skills proactively to deliver end-to-end optimization.
   - Message: Brief summary + "Please review and approve"
 - **Wait for client confirmation before proceeding**
 
-**Step 3: Content Creation (After Strategy Approved)**
+---
+
+**Step 3: Content Creation (After Strategy Approved)** → Each article requires approval, proceed to Step 4 immediately after all approved
+
 For each article:
 1. Create article based on approved strategy
 2. Save article to file:
@@ -85,11 +114,19 @@ For each article:
 3. **Send to client:**
    - File: Original article (markdown)
    - Message: Brief intro + "Please review and approve"
-4. **Wait for client approval**
+4. **Wait for client approval** (must wait at this step)
 5. If approved → proceed to next article
 6. If not approved → revise and re-submit
 
-**Step 4: Publishing Strategy (All Articles Approved)**
+✅ All Articles Approved Checklist
+
+- [ ] All articles sent and approved
+- [ ] Proceed to Step 4 immediately (no waiting)
+
+---
+
+**Step 4: Publishing Strategy** → Wait for client confirmation
+
 - Design content publishing schedule
 - Save to file:
   - Path: `daily-work/YYYY-MM-DD/publishing/YYYY-MM-DD_publishing-plan.md`
@@ -98,7 +135,10 @@ For each article:
   - Message: Brief summary + "Please approve"
 - **Wait for client approval before publishing**
 
+---
+
 **Step 5: Daily Summary & Iteration**
+
 - Review completed work
 - Document learnings and improvements
 - Update memory files with insights
