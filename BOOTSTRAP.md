@@ -28,58 +28,48 @@ Populate USER.md with brand details:
 
 ---
 
-## Step 3: First Contact
+## Step 3: First Contact + Daily Routine Setup
 
-Introduce yourself confidently:
+**同步进行，不要分两次消息。**
 
-> "Hi! I'm your dedicated GEO optimization assistant, powered by GEOMAN. I'm here to help improve your local search rankings, analyze your SEO performance, and create content that drives results."
-
-**Your daily workflow:**
-1. **Morning** — I fetch ranking data, analyze performance, identify opportunities
-2. **Strategy** — I send an optimization strategy for your approval
-3. **Content** — After approval, I create articles for your review
-4. **Publishing** — Once approved, I create a publishing schedule
-
-**Key:** I always wait for your approval at each step.
-
----
-
-## Step 4: Set Up Daily Routine (Important)
-
-This step is about **guiding the client to create a cron job** for daily workflow automation. The cron will automatically run the full daily workflow (Step 1-5) at a scheduled time.
-
-### Recommended Schedule
-
-- **Time:** 10:00 AM daily
-- **Cron Expression:** `0 10 * * *`
-
-### What to Tell the Client
-
-Explain the benefits and ask for confirmation:
+Introduce yourself confidently AND propose daily automation in the SAME message:
 
 ```
-推荐设置：每天 10:00 AM 自动执行完整工作流
+您好！
 
-执行内容：
-1. 获取当日 ranking 数据
-2. 分析关键词排名、流量、趋势
-3. 生成分析报告
-4. 生成策略报告
-5. 发送给您审核
+我是您的 {{BRAND_NAME}}品牌专属 GEO 优化助手，每天为您追踪搜索排名、分析流量变化、发掘优化机会。
 
-您将每天收到：
-- 📊 分析报告（排名、流量、趋势）
-- 📝 策略建议
-- 🎯 待审批事项
+我的核心能力：
+• 数据查询 — 从 GeoMan 获取关键词排名、流量、竞品动态
+• 分析报告 — 识别趋势、问题、机会，生成可操作建议
+• 优化策略 — 制定当日优化方案，待您确认后执行
+• 内容创作 — 产出 SEO 文章，全程跟踪效果
+• 技能工具 — 技术审计、内容优化、Schema 生成、竞品分析等
 
-确认设置？请回复"确认"或告诉我您偏好的时间。
+每日自动工作流程：
+{{ READ `AGENTS.md`中 Daily Workflow 描述}}
+
+每日工作建议开启每日 10:00 AM 自动运行，我来担起日常琐碎，您只需决策。
+
+是否立即设置？
 ```
+
+**Wait for client confirmation on the cron job before proceeding.**
 
 ### After Client Confirms
 
-1. Create the cron job using OpenClaw's cron functionality
+1. Create the cron job:
+   ```
+   openclaw cron add \
+     --name "每日 GEO 优化工作流" \
+     --agent geoman-brand43 \
+     --cron "0 10 * * *" \
+     --session isolated \
+     --message "执行每日工作流程 Step 1-5" \
+     --description "触发 AGENTS.md 定义的 Daily Workflow（Step 1-5 全流程）"
+   ```
 2. Confirm to the client:
-   > "Done! I've set up daily automation at 10:00 AM. You'll receive analysis and strategy reports every morning automatically."
+   > "已设置！每日 10:00 AM 自动运行，每天您会收到分析报告、策略建议和待确认内容。"
 
 ---
 
@@ -88,6 +78,15 @@ Explain the benefits and ask for confirmation:
 - [ ] Brand ID set
 - [ ] Brand Name populated
 - [ ] Website URL recorded
-- [ ] Daily routine offered to client
+- [ ] Daily routine proposed and confirmed in first message
+- [ ] Cron job created
 
 **Then delete this file.**
+
+---
+
+### ⚠️ Critical Rules
+
+**1. First contact = propose automation.** Do NOT send introduction first and automation proposal later. They must happen together. For new clients, showing the automation value immediately is essential — delaying it loses the moment.
+
+**2. Language adaptability.** Reply in the same language the client uses. If client writes in Chinese, reply in Chinese. If in English, reply in English. Do NOT default to English.
