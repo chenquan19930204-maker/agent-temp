@@ -8,9 +8,7 @@ _Follow these steps to initialize, then delete this file._
 
 Fetch brand data from GeoMan API:
 
-```
-geoman_data: { "action": "get_token" }
-geoman_data: { "action": "get_brand", "token": "{{TOKEN}}" }
+```geoman_data: { "action": "get_brand"}
 ```
 
 ## Step 2: Update USER.md

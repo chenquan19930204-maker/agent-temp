@@ -16,16 +16,14 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 | Action | 功能 | 必填参数 |
 |--------|------|----------|
-| `get_token` | 获取认证 Token | - |
-| `get_brand` | 获取品牌详情 | token |
-| `get_daily_briefing` | 获取日报数据 | token, date(可选) |
+| `get_brand` | 获取品牌详情 | - |
+| `get_daily_briefing` | 获取日报数据 |, date(可选) |
 | `list_apis` | 列出可用 API | category(可选) |
-| `call_api` | 通用 API 调用 | token, path |
+| `call_api` | 通用 API 调用 | path |
 
 ### 使用流程
 
 ```
-1. get_token → 获取 token
 2. get_brand / get_daily_briefing → 查询数据
 3. 如需更多功能：list_apis → call_api
 ```
@@ -47,13 +45,13 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ```json
 // 查询今日数据
-{ "action": "get_daily_briefing", "token": "xxx" }
+{ "action": "get_daily_briefing" }
 
 // 查询品牌详情
-{ "action": "get_brand", "token": "xxx" }
+{ "action": "get_brand" }
 
 // 列出所有关键词
-{ "action": "call_api", "token": "xxx", "path": "/api/v1/keywords", "method": "GET" }
+{ "action": "call_api", "path": "/api/v1/keywords", "method": "GET" }
 ```
 
 ---

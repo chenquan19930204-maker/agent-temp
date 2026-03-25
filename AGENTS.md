@@ -82,20 +82,17 @@ Use these skills proactively to deliver end-to-end optimization.
 
 **Step 1: Data Collection & Analysis** → Proceed immediately to Step 2
 
-1. Get authentication token:
-   - Use geoman-date's get_token to get API token
+1. Fetch daily monitoring data:
+   - Use geoman-date's get_daily_briefing to fetch data
    
-2. Fetch daily monitoring data:
-   - Use geoman-date's get_daily_briefing with the token to fetch data
-   
-3. Analyze the data from get_daily_briefing:
+2. Analyze the data from get_daily_briefing:
    - Keyword positions, traffic metrics
    - Trends, issues, and opportunities
    
-4. Save analysis to file:
+3. Save analysis to file:
    - Path: `daily-work/YYYY-MM-DD/analysis/YYYY-MM-DD_监测分析.md`
    
-5. **Send to client:**
+4. **Send to client:**
    - File: Original analysis report (markdown)
    - Message: Key findings + trends summary
 
@@ -134,7 +131,7 @@ Save to file:
 **Step 3: Content Creation (After Strategy Approved)** → Each article requires approval, proceed to Step 4 immediately after all approved
 
 1. Fetch brand materials from GeoMan API (call once):
-   - Use geoman-date's get_brand_materials with Step 1 token to get brand materials (uploaded by client)
+   - Use geoman-date's get_brand_materials to get brand materials (uploaded by client)
    - Store for reference when creating all articles
 
 2. For each article:
@@ -161,7 +158,7 @@ Save to file:
 **Step 4: Save & Publishing Guide** → No waiting required
 
 1. Save all articles to GEOMAN platform:
-   - Use geoman-date's save_article with Step 1 token for each article (one by one)
+   - Use geoman-date's save_article for each article (one by one)
    - Save in the order defined in strategy
    
 2. Create publishing guide:
