@@ -72,19 +72,32 @@ Use these skills proactively to deliver end-to-end optimization.
 - ❌ Pausing after Step 1
 - ❌ Pausing after all articles approved (Step 3 complete) → proceed immediately to Step 4
 
+## ⚙️ Error Handling
+
+- If API call fails → Retry up to 3 times with exponential backoff
+- If client rejects article → Note feedback, revise, and resubmit
+- If save fails → Log error, notify client, continue with remaining articles
+
 ---
 
 **Step 1: Data Collection & Analysis** → Proceed immediately to Step 2
 
-- Fetch today's ranking and monitoring data
-- Analyze keyword positions, traffic metrics
-- Identify trends, issues, and opportunities
-- Review competitor movements
-- Save analysis to file:
-  - Path: `daily-work/YYYY-MM-DD/analysis/YYYY-MM-DD_analysis.md`
-- **Send to client:**
-  - File: Original analysis report (markdown)
-  - Message: Key findings + trends summary
+1. Get authentication token:
+   - Use geoman-date's get_token to get API token
+   
+2. Fetch daily monitoring data:
+   - Use geoman-date's get_daily_briefing with the token to fetch data
+   
+3. Analyze the data from get_daily_briefing:
+   - Keyword positions, traffic metrics
+   - Trends, issues, and opportunities
+   
+4. Save analysis to file:
+   - Path: `daily-work/YYYY-MM-DD/analysis/YYYY-MM-DD_监测分析.md`
+   
+5. **Send to client:**
+   - File: Original analysis report (markdown)
+   - Message: Key findings + trends summary
 
 ✅ Step 1 Completion Checklist
 
@@ -96,8 +109,21 @@ Use these skills proactively to deliver end-to-end optimization.
 
 **Step 2: Strategy Report** → Wait for client confirmation
 
-- Save strategy report to file:
-  - Path: `daily-work/YYYY-MM-DD/strategy/YYYY-MM-DD_strategy.md`
+Based on Step 1 analysis, create today's optimization strategy:
+
+1. Identify target keywords for today
+2. Define content topics based on opportunities
+3. Plan article count and focus areas
+
+Strategy report should include:
+- Target keywords list (ranked by priority)
+- Content topics list
+- Article count: X articles
+- Priority ranking
+
+Save to file:
+  - Path: `daily-work/YYYY-MM-DD/strategy/YYYY-MM-DD_优化策略.md`
+  
 - **Send to client:**
   - File: Original document (markdown)
   - Message: Brief summary + "Please review and approve"
@@ -107,10 +133,14 @@ Use these skills proactively to deliver end-to-end optimization.
 
 **Step 3: Content Creation (After Strategy Approved)** → Each article requires approval, proceed to Step 4 immediately after all approved
 
-For each article:
+1. Fetch brand materials from GeoMan API (call once):
+   - Use geoman-date's get_brand_materials with Step 1 token to get brand materials (uploaded by client)
+   - Store for reference when creating all articles
+
+2. For each article:
 1. Create article based on approved strategy
 2. Save article to file:
-   - Path: `daily-work/YYYY-MM-DD/content/YYYY-MM-DD_article_标题.md`
+   - Path: `daily-work/YYYY-MM-DD/content/YYYY-MM-DD_标题.md`
 3. **Send to client:**
    - File: Original article (markdown)
    - Message: Brief intro + "Please review and approve"
@@ -125,15 +155,19 @@ For each article:
 
 ---
 
-**Step 4: Publishing Strategy** → Wait for client confirmation
+**Step 4: Save & Publishing Guide** → No waiting required
 
-- Design content publishing schedule
-- Save to file:
-  - Path: `daily-work/YYYY-MM-DD/publishing/YYYY-MM-DD_publishing-plan.md`
-- **Send to client:**
-  - File: Original plan (markdown)
-  - Message: Brief summary + "Please approve"
-- **Wait for client approval before publishing**
+1. Save all articles to GEOMAN platform:
+   - Use geoman-date's save_article with Step 1 token for each article (one by one)
+   - Save in the order defined in strategy
+   
+2. Create publishing guide:
+   - Include: article list, scheduled dates, platform instructions
+   - Save to: `daily-work/YYYY-MM-DD/publishing/YYYY-MM-DD_发布指南.md`
+   
+3. **Send to client:**
+   - File: Publishing guide (markdown)
+   - Message: Brief summary + "please publish from GEOMAN platform"
 
 ---
 
@@ -152,10 +186,10 @@ Use format: `YYYY-MM-DD_类型.md`
 
 | Type | Filename Example |
 |------|------------------|
-| Strategy | `2026-03-22_strategy.md` |
-| Article | `2026-03-22_article_品牌优化指南.md` |
-| Publishing Plan | `2026-03-22_publishing-plan.md` |
-| Analysis | `2026-03-22_analysis.md` |
+| Strategy | `2026-03-22_优化策略.md` |
+| Article | `2026-03-22_品牌优化指南.md` |
+| Publishing Guide | `2026-03-22_发布指南.md` |
+| Analysis | `2026-03-22_监测分析.md` |
 
 **📤 Send Format**
 
@@ -184,7 +218,7 @@ daily-work/
     ├── analysis/       # Analysis reports (analysis.md)
     ├── strategy/      # Strategy reports (strategy.md)
     ├── content/       # Created articles (multiple files)
-    └── publishing/    # Publishing plans (publishing-plan.md)
+    └── publishing/    # Publishing guides (publishing-guide.md)
 ```
 
 ---
