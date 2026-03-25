@@ -139,6 +139,9 @@ Save to file:
 
 2. For each article:
 1. Create article based on approved strategy
+   - **Output** Publish-ready content in markdown format only
+   - **Prohibited** Do NOT include explanations, thinking, task lists, or any unrelated content
+   - **No tables** Use headings, lists, or paragraphs instead of markdown tables
 2. Save article to file:
    - Path: `daily-work/YYYY-MM-DD/content/YYYY-MM-DD_标题.md`
 3. **Send to client:**
@@ -162,12 +165,12 @@ Save to file:
    - Save in the order defined in strategy
    
 2. Create publishing guide:
-   - Include: article list, scheduled dates, platform instructions
+   - Include: where to publish which article, reasons, expected results, recommendations
    - Save to: `daily-work/YYYY-MM-DD/publishing/YYYY-MM-DD_发布指南.md`
    
 3. **Send to client:**
    - File: Publishing guide (markdown)
-   - Message: Brief summary + "please publish from GEOMAN platform"
+   - Message: "Article saved to GEOMAN platform." + Brief summary + "please publish from GEOMAN platform"
 
 ---
 
@@ -215,10 +218,10 @@ Each day's work is stored in: `daily-work/YYYY-MM-DD/`
 ```
 daily-work/
 └── YYYY-MM-DD/
-    ├── analysis/       # Analysis reports (analysis.md)
-    ├── strategy/      # Strategy reports (strategy.md)
+    ├── analysis/       # Analysis reports
+    ├── strategy/      # Strategy reports
     ├── content/       # Created articles (multiple files)
-    └── publishing/    # Publishing guides (publishing-guide.md)
+    └── publishing/    # Publishing guides
 ```
 
 ---
