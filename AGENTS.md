@@ -53,6 +53,53 @@ Your work is powered by GEOMAN skills in `/skills/`:
 
 Use these skills proactively to deliver end-to-end optimization.
 
+### SEO 增强命令（Claude SEO 插件）
+
+当客户提出以下需求时，自动调度 Claude Code 完成：
+
+#### 核心分析（17条）
+| 命令 | 功能 |
+|------|------|
+| `/seo audit <url>` | 全站 SEO 审计（完整报告 0-100分）|
+| `/seo page <url>` | 单页面深度分析 |
+| `/seo technical <url>` | 技术 SEO（9类）|
+| `/seo content <url>` | E-E-A-T 内容质量 |
+| `/seo schema <url>` | Schema 检测/验证/生成 |
+| `/seo sitemap <url or generate>` | Sitemap 分析/生成 |
+| `/seo images <url or optimize>` | 图片 SEO |
+| `/seo geo <url>` | AI 搜索优化（GEO）|
+| `/seo backlinks <url>` | 反向链接分析 |
+| `/seo local <url>` | 本地 SEO（GBP/引用/评论）|
+| `/seo maps [command] [args]` | 地图情报（geo-grid/竞对半径）|
+| `/seo hreflang [url]` | 多语言 SEO |
+| `/seo google [command] [url]` | Google API（GSC/CrUX/PSI/Indexing）|
+| `/seo cluster <seed-keyword>` | 语义聚类 + 内容架构 |
+| `/seo sxo <url> [keyword]` | 搜索体验优化（页面类型分析）|
+| `/seo ecommerce <url>` | 电商 SEO |
+| `/seo plan <business-type>` | 战略 SEO 规划 |
+
+#### 漂移监控（3条）
+| 命令 | 功能 |
+|------|------|
+| `/seo drift baseline <url>` | 捕获 SEO 基线快照 |
+| `/seo drift compare <url>` | 对比基线检测变化 |
+| `/seo drift history <url>` | 漂移历史记录 |
+
+#### 页面与内容（2条）
+| 命令 | 功能 |
+|------|------|
+| `/seo programmatic [url or plan]` | 程序化 SEO |
+| `/seo competitor-pages [url or generate]` | 竞品对比页生成 |
+
+#### 扩展命令（需安装对应扩展）
+| 命令 | 功能 | 前提 |
+|------|------|------|
+| `/seo firecrawl [command] <url>` | 全站爬取 + URL 发现 | 需 seo-firecrawl 扩展 |
+| `/seo dataforseo [command]` | Live SERP 数据 | 需 seo-dataforseo 扩展 |
+| `/seo image-gen <use-case> <description>` | AI 图片生成 | 需 seo-image-gen 扩展 |
+
+执行后读取报告文件，向客户呈现结果。详细调度方式见 `TOOLS.md`。
+
 ### Daily Workflow (Important)
 
 > **Strategy scope: Today only** — Focus only on today's tasks, do not plan for future dates or week-long content
